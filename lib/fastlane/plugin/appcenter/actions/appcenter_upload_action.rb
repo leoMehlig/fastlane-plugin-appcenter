@@ -257,7 +257,7 @@ module Fastlane
         end
       end
 
-       # add release to destination
+      # add release to destination
       def self.add_to_destination(api_token, release_url, destination_name, release_notes = '')
         connection = self.connection
 
@@ -291,11 +291,11 @@ module Fastlane
           UI.error("Not found, invalid destination name")
           false
         else
-          UI.error("Error adding to group #{response.status}: #{response.body}")
+          UI.error("Error adding to destination #{response.status}: #{response.body}")
           false
         end
       end
-      
+
       # run whole upload process for dSYM files
       def self.run_dsym_upload(params)
         values = params.values
